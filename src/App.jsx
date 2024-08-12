@@ -1,7 +1,6 @@
 import { useState } from "react"
 import "./App.css"
 import { IoIosArrowDropdown } from "react-icons/io";
-import { IoIosArrowDropup } from "react-icons/io";
 
 function App() {
   const[selected, setSelected] = useState(null)
@@ -21,7 +20,7 @@ function App() {
           <div className="item">
             <div className="title" onClick={() => toggle(i)}>
               <h2>{item.question}</h2>
-              <span>{selected === i ? <IoIosArrowDropup/> : <IoIosArrowDropdown />}</span>
+              <span>{selected === i ? "-" : "+"}</span>
             </div>
             <div className={selected === i ? "content show" : "content"}>{item.answer}</div>
           </div>
